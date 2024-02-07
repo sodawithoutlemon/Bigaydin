@@ -1,0 +1,159 @@
+:root {
+    --levelfour-color: #1B262C;
+    --levelthree-color: #444F5A;
+    --leveltwo-color: #3282B8;
+    --levelone-color: #BBE1FA;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.strokeme
+{
+    text-shadow: 3px 3px 3px black;
+}
+
+.img {
+    background-attachment: fixed;
+    background-size:     cover; 
+    background-repeat:   no-repeat;
+    background-position: center center;    
+}
+
+/*
+    outlines
+*/
+
+.space {
+    background-color: var(--levelthree-color);
+}
+
+.mid {
+    background-color: var(--levelfour-color);
+    padding: 0% !important;
+}
+
+.customfooter{
+    background-color: var(--levelthree-color);
+    height: 150px;
+}
+
+.customheader{
+    background-color: var(--levelthree-color);
+    height: 50px;
+}
+
+/*
+    mid-inside
+*/
+
+.top {
+    background-color: white;
+    margin: 1%;
+    vertical-align: top;
+    height: 30.5vw;
+}
+
+.bottom {
+    background-color: var(--levelfour-color);
+    margin: 1%;
+}
+
+/*
+    top-inside
+*/
+
+.middleinfo {
+    display: inline-block;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 0.5vw;
+    height: 29.5vw;
+    width: 98%;
+    vertical-align: top;
+    background-color: var(--levelfour-color);
+    text-align: center;
+}
+
+h1 {
+    color: white !important;
+    font-family: 'Sacramento', cursive;   
+    font-size: 12vw !important; 
+    margin-top: 8vw !important;
+}
+
+
+.buttonlayer {
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    border-style: solid;
+    border-width: 0.6vw;
+    height: 9vw;
+    border-color: var(--levelfour-color);
+}
+
+
+#marginnull {
+    font-size: 1.1vw !important;
+    width: fit-content;
+    color: white;
+    margin-bottom: 0px !important;
+}
+
+.btn {
+    margin-bottom: 15vw !important;
+    display: inline-block;
+    border-radius: 0 !important;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5vw !important;
+    padding: 0 !important;
+}
+
+.butdiv {
+    vertical-align: top;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    background-color: var(--levelthree-color);
+    margin: 0;
+}
+
+/*
+    bottom-inside
+*/
+
+th {
+    padding: 0.5vw !important;
+}
+td {
+    padding: 0.5vw !important;
+    vertical-align: middle !important;
+}
+
+h5 {
+    display: inline-block !important;
+    margin-bottom: 0 !important;
+    font-size: 1.5vw !important;
+}
+
+.table {
+    margin-bottom: 0px !important;
+    text-align: center !important;
+    font-size: 1.1vw;
+}
+
+.head {
+    vertical-align: middle !important;
+}
+
+@media (max-width: 720px) and (min-width: 0px) {
+    h5 {
+        font-size: 2vw !important;
+    }
+}
