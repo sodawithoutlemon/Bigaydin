@@ -1,14 +1,13 @@
+
 $(window).resize(function(){location.reload();})
 
-
-
-//var topic = window.location.search.split("=")[1].split("-")[0]
-//var order = window.location.search.split("=")[1].split("-")[1]
 var order = "alphabetical"
-//var order = "score"
-//var firstletter = topic[0].toUpperCase();
-//$(".topic").text(firstletter+topic.slice(1,10))
 var key = apikey
+
+var moviesd = moviesss
+var seriesd = seriesss
+var datesd = datesss
+
 
 function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
@@ -20,6 +19,26 @@ var alphabeticalarray = []
 var arraywithscores = []
 var arraywithother = []
 var scored = []
+var recapeble = []
+
+function New(){
+    newfirst = moviesd.concat(seriesd)
+    finew = newfirst.concat(datesss)
+    $('.ne').text(finew[Math.floor(Math.random() * finew.length)])
+    newfirst = []
+    finew = []
+}
+
+function ReCap(){
+    for(var z = 0; z<scored.length; z++){
+        if(scored[z][4][0] > 0 && scored[z][0] == "🌃"){
+            recapeble.push(scored[z][1])
+        }
+    }
+    $('.rec').text(recapeble[Math.floor(Math.random() * recapeble.length)])
+    console.log(recapeble)
+    recapeble = []
+}
 
 async function TemplateMaker() {
     var databyscoreurl = "https://sheets.googleapis.com/v4/spreadsheets/1PK8BUAcDPYl96ebIcT3EkPzbzyKF-kwi6cHXWyVohQ4/values/one/?key="+key
@@ -30,11 +49,16 @@ async function TemplateMaker() {
 
     test.shift()
     scored = test
-   
 
 
     var number = Math.floor(Math.random() * scored[0][6]) + 1
-    var image = "/images/"+number+".jpg"
+
+    if(scored[0][7]>1){
+        var image = "/images/"+scored[0][7]+".jpg"
+    } else {
+        var image = "/images/"+number+".jpg"
+    }
+
 
     $('.img').css('background-image','url('+image+')'); 
 
@@ -86,7 +110,6 @@ async function TemplateMaker() {
 
 async function GetDataAlphabetical(){
     await TemplateMaker()
-    console.log(alphabeticalarray)
     for (var i = 0; i < alphabeticalarray.length; i++){
         if (isNumeric(alphabeticalarray[i]["ascore"])){
             var writtenscorea = alphabeticalarray[i]["ascore"] + "/10"
