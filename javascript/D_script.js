@@ -31,7 +31,7 @@ function New(){
 
 function ReCap(){
     for(var z = 0; z<scored.length; z++){
-        if(scored[z][4][0] > 0 && scored[z][0] == "🌃"){
+        if(scored[z][4][0] > 0 && (scored[z][0] == "🌃" || scored[z][0] == "🍽️")){
             recapeble.push(scored[z][1])
         }
     }
