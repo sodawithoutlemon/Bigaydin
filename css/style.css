@@ -97,7 +97,6 @@ h5 {
     height: 11.5vw;
     width: 98%;
     vertical-align: middle;
-    background-color: var(--levelfour-color);
     text-align: center;
 }
 
@@ -164,12 +163,7 @@ h1 {
     height: 100vh;
 }
 
-.butdiv {
-    height: 8vw;
-    width: 80%;
-    background-color: var(--level-color);
-    margin: 0;
-}
+
 
 
 
